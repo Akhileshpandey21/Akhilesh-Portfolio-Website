@@ -37,9 +37,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Hi, I'm Akhilesh! A software developer with a passion for AI, web
+            Hi, I&apos;sm Akhilesh! A software developer with a passion for AI, web
             development, android development and problem-solving. Turning ideas
-            into reality through clean and efficient code. Let's connect!
+            into reality through clean and efficient code. Let&apos;s connect!
           </p>
 
           <div>

@@ -18,6 +18,11 @@ module.exports = {
       ...colors,
       primary: colors.purple,
       secondary: colors.pink,
+      sky: colors.lightBlue,  // Replace lightBlue with sky
+      stone: colors.warmGray, // Replace warmGray with stone
+      neutral: colors.trueGray, // Replace trueGray with neutral
+      gray: colors.coolGray, // Replace coolGray with gray
+      slate: colors.blueGray, // Replace blueGray with slate
     },
   },
   plugins: [],
