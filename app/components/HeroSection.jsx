@@ -22,13 +22,13 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Judy",
+                "Akhilesh",
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
+                "Android Developer",
                 1000,
-                "UI/UX Designer",
+                "Data Analyst",
                 1000,
               ]}
               wrapper="span"
@@ -37,18 +37,28 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+            Hi, I'm Akhilesh! A software developer with a passion for AI, web
+            development, android development and problem-solving. Turning ideas
+            into reality through clean and efficient code. Let's connect!
           </p>
+
           <div>
             <Link
-              href="/#contact"
+              // href="/#contact"
+              href={
+                "https://wa.me/+919696292983?text=Hi%20there!%20I'm%20interested%20in%20working%20with%20you."
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
               Hire Me
             </Link>
             <Link
-              href="/"
+              href="/Full_Stack_Developer_Akhilesh_Kumar_Pandey_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Full_Stack_Developer_Akhilesh_Kumar_Pandey_Resume.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -61,15 +71,19 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-4 lg:mt-0 "
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          {/* Rotating Animated Glowing Border */}
+          <div className="absolute w-[280px] h-[280px] lg:w-[420px] lg:h-[420px] sm:w-[320px] sm:h-[320px] rounded-full border-[6px] border-transparent animate-rotate-gradient before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#ff6b6b] before:via-[#ffb142] before:to-[#ff6b6b] before:rounded-full before:blur-lg before:animate-border-spin"></div>
+
+          {/* Main Image Container */}
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] sm:w-[280px] sm:h-[280px] relative flex items-center justify-center overflow-hidden">
             <Image
-              src="/images/hero-image.png"
+              src="/images/Akhil.png"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              width={260}
+              height={260}
             />
           </div>
         </motion.div>

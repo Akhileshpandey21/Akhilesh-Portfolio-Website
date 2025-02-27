@@ -1,12 +1,40 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import GithubIcon from "../../public/github-icon.svg";
+import LinkedinIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { toast,ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+  // Initialize toast notifications
+  const notifySuccess = () => toast('✅ Email send successfully!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+   
+    });
+  const notifyError = () => toast('❌ Failed to send email!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    
+    });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,11 +60,19 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options);
     const resData = await response.json();
-
+ try{
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
+      notifySuccess();
+    }else{
+      console.error("Error sending email:", resData.error);
+      notifyError();
     }
+  }catch(error){
+    console.error("Error sending email:", resData.error);
+    notifyError();
+  }
   };
 
   return (
@@ -56,20 +92,29 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
-            <Image src={GithubIcon} alt="Github Icon" />
+          <Link href="https://github.com/Akhileshpandey21" target="_blank">
+            <FaGithub className="text-white text-3xl sm:text-4xl p-2 bg-gray-800 rounded-full hover:bg-primary-500 transition duration-300" />
           </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          <Link
+            href="https://www.linkedin.com/in/akhilesh-kumar-pandey-52b254258/"
+            target="_blank"
+          >
+            <FaLinkedin className="text-white text-3xl sm:text-4xl p-2 bg-gray-800 rounded-full hover:bg-primary-500 transition duration-300" />
+          </Link>
+          <Link href="https://x.com/PandeyAkhil4369" target="_blank">
+            <FaTwitter className="text-white text-3xl sm:text-4xl p-2 bg-gray-800 rounded-full hover:bg-primary-500 transition duration-300" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/its_me_akhil81/"
+            target="_blank"
+          >
+            <FaInstagram className="text-white text-3xl sm:text-4xl p-2 bg-gray-800 rounded-full hover:bg-primary-500 transition duration-300" />
           </Link>
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
+        <ToastContainer />
+       
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
@@ -124,7 +169,7 @@ const EmailSection = () => {
               Send Message
             </button>
           </form>
-        )}
+        
       </div>
     </section>
   );
