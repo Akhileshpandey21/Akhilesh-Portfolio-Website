@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website
 
 This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.
@@ -28,3 +29,6 @@ The following dependencies are required for this project:
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
 
+=======
+# Portfolio-Website
+>>>>>>> 2b2a353622fbd70192d9bf01301cb63053b8ab1c
