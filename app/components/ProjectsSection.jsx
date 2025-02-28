@@ -7,57 +7,57 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
+    title: "Nextjs Portfolio Website",
+    description: "A personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion, featuring animations, project showcases, and contact forms.",
+    image: "/images/projects/portfolio.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/Portfolio-Website",
+    previewUrl: "https://portfolio-website-five-red-34.vercel.app/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "Movie Recommendation System",
+    description: "A machine learning-based system that suggests movies based on user preferences, leveraging collaborative filtering and content-based filtering techniques.",
+    image: "/images/projects/movie.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/Movie-Recommendation_System",
+    previewUrl: "https://github.com/Akhileshpandey21/Movie-Recommendation_System",
   },
   {
     id: 3,
     title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    description: "A full-stack e-commerce platform with user authentication, product listings, a shopping cart, and a secure checkout process using modern web technologies.",
+    image: "/images/projects/ecommerce.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/Shopcool_ecommerceWebsite",
+    previewUrl: "https://github.com/Akhileshpandey21/Shopcool_ecommerceWebsite",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
+    title: "EvaChatAP",
+    description: "A real-time AI-powered chatbot application designed for mobile devices, integrating natural language processing (NLP) for intelligent conversations.",
+    image: "/images/projects/chat.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/EvaChatAP",
+    previewUrl: "https://github.com/Akhileshpandey21/EvaChatAP",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "Attendance System Using OpenCV",
+    description: "A face recognition-based attendance system using OpenCV and Python, allowing automated attendance marking with real-time detection and authentication.",
+    image: "/images/projects/face.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/Attendance-system",
+    previewUrl: "https://github.com/Akhileshpandey21/Attendance-system",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
+    title: "Real Estate Price Predictor",
+    description: "A machine learning model that predicts real estate prices based on various factors such as location, square footage, and market trends.",
+    image: "/images/projects/real.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Akhileshpandey21/Real-Estate-Price-Predictor",
+    previewUrl: "https://github.com/Akhileshpandey21/Real-Estate-Price-Predictor",
   },
 ];
 
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12 mt-5">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">

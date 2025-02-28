@@ -4,6 +4,7 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import {
   FaNodeJs,
   FaReact,
@@ -26,7 +27,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <motion.div
-     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full sm:text-xs md:text-xs lg:text-xs sm:gap-2 md-gap-3 lg:gap-4"
+     className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full sm:text-xs md:text-xs lg:text-xs sm:gap-2 md-gap-3 lg:gap-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -172,7 +173,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="text-white bg-gradient-to-b from-gray-900 to-black py-16"
+      className="text-white bg-gradient-to-b from-gray-900 to-black py-16 "
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center px-6 xl:gap-16 sm:py-16 xl:px-16">
@@ -185,7 +186,7 @@ const AboutSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <Image
-            src="/images/about-image.png"
+            src="/images/about.png"
             alt="Description of image"
             width={500}
             height={500}

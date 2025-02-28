@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Hi, I&apos;sm Akhilesh! A software developer with a passion for AI, web
+            Hi, I&apos; m Akhilesh! A software developer with a passion for AI, web
             development, android development and problem-solving. Turning ideas
             into reality through clean and efficient code. Let&apos;s connect!
           </p>
@@ -78,13 +78,18 @@ const HeroSection = () => {
 
           {/* Main Image Container */}
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] sm:w-[280px] sm:h-[280px] relative flex items-center justify-center overflow-hidden">
-            <Image
-              src="/images/Akhil.png"
-              alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={260}
-              height={260}
-            />
+          <Image
+  src="/images/Ap.png"
+  alt="hero image"
+  className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+  width={429}
+  height={581}
+  sizes="(max-width: 640px) 200px, 
+         (max-width: 768px) 300px, 
+         (max-width: 1024px) 380px, 
+         429px"
+  style={{ maxWidth: "100%", height: "auto" }}
+/>
           </div>
         </motion.div>
       </div>
